@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Models\Post;
 use App\Models\Barang;
-
+use App\Models\Post;
+use App\Models\Siswa;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -82,12 +82,34 @@ Route::get('myname/{name?}', function ($a = "abdu") {
 
 //menampilkan data dalam database
 Route::get('/testmodel', function () {
-    $data = Post::all();
-    return $data;
+    $post = Post::all();
+    return view('tampil_post', compact('post'));
 });
 
 Route::get('/barang', function () {
-    $data = Barang::all();
-    return $data;
+    $barang = Barang::all();
+    return view('tampil_barang', compact('barang'));
+
+});
+
+//menampilkan data dengan view
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/siswa', function () {
+    $siswa = Siswa::all();
+    //$siswa = Siswa::where('jenis kelamin','like','%perempuan%')->get();
+    // $siswa = new Siswa;
+    // $siswa->nama = "rasya";
+    // $siswa->jenis_kelamin = "laki-laki";
+    // $siswa->alamat = "rancamanyar";
+    // $siswa->agama = "islam";
+    // $siswa->telepon = "9876";
+    // $siswa->email = "rasyaas@gmail.com";
+    // $siswa->save();
+    //return $siswa;
+    return view('tampil_siswa', compact('siswa'));
+
 });
 
