@@ -3,6 +3,12 @@
 use App\Models\Barang;
 use App\Models\Post;
 use App\Models\Siswa;
+use App\Models\Pengguna;
+use App\Models\Telepon;
+use App\Models\Merek;
+use App\Models\Produk;
+
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -113,3 +119,22 @@ Route::get('/siswa', function () {
 
 });
 
+Route::get('/pengguna', function () {
+    $pengguna = Pengguna::all();
+    return view('tampil_pengguna', compact('pengguna'));
+});
+
+Route::get('/telepon', function () {
+    $telepon = Telepon::all();
+    return view('tampil_telepon', compact('telepon'));
+});
+
+Route::get('/merk', function () {
+    $merek = Merek::all();
+    return view('tampil_merek', compact('merek'));
+});
+
+Route::get('/produk', function () {
+    $produk = Produk::all();
+    return view('tampil_produk', compact('produk'));
+});
