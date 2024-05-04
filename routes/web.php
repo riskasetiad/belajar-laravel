@@ -7,6 +7,7 @@ use App\Models\Pengguna;
 use App\Models\Telepon;
 use App\Models\Merek;
 use App\Models\Produk;
+use App\Models\Transaksi;
 
 
 use Illuminate\Support\Facades\Route;
@@ -137,4 +138,9 @@ Route::get('/merk', function () {
 Route::get('/produk', function () {
     $produk = Produk::all();
     return view('tampil_produk', compact('produk'));
+});
+
+Route::get('/transaksi', function () {
+    $transaksi = Transaksi::all();
+    return view('tampil_transaksi', compact('transaksi'));
 });
