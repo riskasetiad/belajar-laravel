@@ -1,15 +1,13 @@
 <?php
 
 use App\Models\Barang;
-use App\Models\Post;
-use App\Models\Siswa;
-use App\Models\Pengguna;
-use App\Models\Telepon;
 use App\Models\Merek;
+use App\Models\Pengguna;
+use App\Models\Post;
 use App\Models\Produk;
+use App\Models\Siswa;
+use App\Models\Telepon;
 use App\Models\Transaksi;
-
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -98,6 +96,23 @@ Route::get('/barang', function () {
     return view('tampil_barang', compact('barang'));
 
 });
+
+Route::get('/template', function () {
+
+    $post = Post::all();
+return view('template', compact('post'));
+
+
+});
+
+Route::get('/template2', function () {
+
+    $produk = Produk::all();
+return view('template2', compact('produk'));
+
+
+});
+
 
 //menampilkan data dengan view
 Route::get('/about', function () {

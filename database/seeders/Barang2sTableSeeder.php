@@ -14,12 +14,12 @@ class Barang2sTableSeeder extends Seeder
      */
     public function run()
     {
-        $barang2s = [
-            ['nama_barang' => 'Tas Laptop', 'harga' => 45000, 'stok' => 2],
-            ['nama_barang' => 'Payung', 'harga' => 50000, 'stok' => 1],
-            ['nama_barang' => 'Botol Minum', 'harga' => 25000, 'stok' => 3],
-        ];
-        DB::table('barang2s')->insert($barang2s);
+        // $barang2s = [
+        //     ['nama_barang' => 'Tas Laptop', 'harga' => 45000, 'stok' => 2],
+        //     ['nama_barang' => 'Payung', 'harga' => 50000, 'stok' => 1],
+        //     ['nama_barang' => 'Botol Minum', 'harga' => 25000, 'stok' => 3],
+        // ];
+        // DB::table('barang2s')->insert($barang2s);
 
     }
 }

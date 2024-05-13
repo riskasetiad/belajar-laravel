@@ -14,12 +14,12 @@ class PembelisTableSeeder extends Seeder
      */
     public function run()
     {
-        $pembelis = [
-            ['nama_pembeli' => 'Riska Setia D', 'jenis_kelamin' => 'Perempuan' ], 
-            ['nama_pembeli' => 'Silva Aulia F', 'jenis_kelamin' =>'Perempuan' ], 
-            ['nama_pembeli' => 'Kayla Syahwalia', 'jenis_kelamin' => 'Perempuan' ], 
-        ];
-        DB::table('pembelis')->insert($pembelis);
+        // $pembelis = [
+        //     ['nama_pembeli' => 'Riska Setia D', 'jenis_kelamin' => 'Perempuan' ], 
+        //     ['nama_pembeli' => 'Silva Aulia F', 'jenis_kelamin' =>'Perempuan' ], 
+        //     ['nama_pembeli' => 'Kayla Syahwalia', 'jenis_kelamin' => 'Perempuan' ], 
+        // ];
+        // DB::table('pembelis')->insert($pembelis);
 
     }
 }
