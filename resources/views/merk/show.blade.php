@@ -22,30 +22,31 @@
         <div class="container">
             <div class="row mt-5">
                 <center>
-                    <h3>List Artikel</h3>
+                    <h3>Detail Merk</h3>
                 </center>
             </div>
             <div class="row mt-5">
-                @foreach ($post as $data)
-                <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://beritajatim.com/cdn-cgi/image/quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/11/jamet.jpg?fit=300%2C200&ssl=1" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $data->title }}</h5>
-                        <p class="card-text">{{ $data->content }}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+               
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://beritajatim.com/cdn-cgi/image/quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/11/jamet.jpg?fit=300%2C200&ssl=1"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $merek->title }}</h5>
+                                <p class="card-text">{{ $merek->content }}</p>
+                                <a href="/merk2/" class="btn btn-primary">Kembali</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-               </div>
-          @endforeach
-                </div>
+              
             </div>
         </div>
-    
+    </div>
+
     <!-- CONTENT -->
 
     <!-- FOOTER -->
-   @include('layout.footer')
+    @include('layout.footer')
     <!-- FOOTER -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

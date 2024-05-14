@@ -22,33 +22,31 @@
         <div class="container">
             <div class="row mt-5">
                 <center>
-                    <h3>List Produk</h3>
+                    <h3>List Merk</h3>
                 </center>
             </div>
             <div class="row mt-5">
-                @foreach ($produk as $data)
-                <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://beritajatim.com/cdn-cgi/image/quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/11/jamet.jpg?fit=300%2C200&ssl=1" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $data->id }}</h5>
-                        <p class="card-text">{{ $data->nama_produk }}</p>
-                        <p class="card-text">{{ $data->jumlah }}</p>
-                        <p class="card-text">{{ $data->tanggal_produk }}</p>
-                       <p class="card-text">{{$data->merek->nama_merk}}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                @foreach ($merek as $data)
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://beritajatim.com/cdn-cgi/image/quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/11/jamet.jpg?fit=300%2C200&ssl=1"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $data->id }}</h5>
+                                <p class="card-text">{{ $data->nama_merk }}</p>
+                                <a href="{{$data->id}}" class="btn btn-primary">Lihat Detail</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-               </div>
-          @endforeach
-                </div>
+                @endforeach
             </div>
         </div>
-    
+    </div>
+
     <!-- CONTENT -->
 
     <!-- FOOTER -->
-   @include('layout.footer')
+    @include('layout.footer')
     <!-- FOOTER -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

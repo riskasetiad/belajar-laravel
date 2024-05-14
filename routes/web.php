@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\MerkController;
 use App\Models\Barang;
 use App\Models\Merek;
 use App\Models\Pengguna;
@@ -97,22 +100,14 @@ Route::get('/barang', function () {
 
 });
 
-Route::get('/template', function () {
+Route::get('post', [PostController::class, 'menampilkan']);
+Route::get('post/{id}', [PostController::class, 'show']);
 
-    $post = Post::all();
-return view('template', compact('post'));
+Route::get('produk2', [ProdukController::class, 'menampilkan']);
+Route::get('produk2/{id}', [ProdukController::class, 'show']);
 
-
-});
-
-Route::get('/template2', function () {
-
-    $produk = Produk::all();
-return view('template2', compact('produk'));
-
-
-});
-
+Route::get('merk2', [MerkController::class, 'menampilkan']);
+Route::get('merk2/{id}', [MerkController::class, 'show']);
 
 //menampilkan data dengan view
 Route::get('/about', function () {
