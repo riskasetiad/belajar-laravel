@@ -14,7 +14,7 @@
 
 <body>
     <!-- NAVBAR -->
-    @include('layout.navbar')
+    @include('layouts.navbar')
     <!-- NAVBAR -->
 
     <!-- CONTENT -->
@@ -45,7 +45,7 @@
     <!-- CONTENT -->
 
     <!-- FOOTER -->
-   @include('layout.footer')
+   @include('layouts.footer')
     <!-- FOOTER -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

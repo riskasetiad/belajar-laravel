@@ -3,6 +3,8 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\MerkController;
+use App\Http\Controllers\BrandController;
+use App\Models\Brand;
 use App\Models\Barang;
 use App\Models\Merek;
 use App\Models\Pengguna;
@@ -154,3 +156,10 @@ Route::get('/transaksi', function () {
     $transaksi = Transaksi::all();
     return view('tampil_transaksi', compact('transaksi'));
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// crud brand
+Route::resource('brand', BrandController::class);

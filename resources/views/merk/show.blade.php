@@ -14,7 +14,7 @@
 
 <body>
     <!-- NAVBAR -->
-    @include('layout.navbar')
+    @include('layouts.navbar')
     <!-- NAVBAR -->
 
     <!-- CONTENT -->
