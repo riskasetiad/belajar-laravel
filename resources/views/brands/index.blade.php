@@ -11,7 +11,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <a href="{{route('brand.create')}}" class="btn btn-primary">Add Data</a>
+                                    <a href="{{ route('brand.create') }}" class="btn btn-primary">Add Data</a>
                                     <th scope="col">No</th>
                                     <th scope="col">Name Brand</th>
                                     <th scope="col">Action</th>
@@ -23,14 +23,19 @@
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
                                         <td>{{ $data->name_brand }}</td>
-                                        <td>
-                                            <a href="" class="btn btn-success">Edit</a>
-                                            <a href="{{route('brand.show', $data->id)}}" class="btn btn-warning">Show</a>
-                                            <a href="" class="btn btn-danger">Delete</a>
-                                        </td>
+                                        <form action="{{ route('brand.destroy', $data->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <td>
+                                                <a href="{{ route('brand.edit', $data->id) }}"
+                                                    class="btn btn-success">Edit</a>
+                                                <a href="{{ route('brand.show', $data->id) }}"
+                                                    class="btn btn-warning">Show</a>
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </td>
+                                        </form>
                                     </tr>
                                 @endforeach
-
                             </tbody>
                         </table>
                     </div>
